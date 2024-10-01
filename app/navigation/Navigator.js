@@ -1,4 +1,3 @@
-// src/navigation/AppNavigator.js
 
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -18,3 +17,6 @@ const Navigator = () => {
 };
 
 export default Navigator;
+
+
+// make chengers

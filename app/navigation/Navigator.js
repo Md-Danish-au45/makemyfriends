@@ -9,6 +9,10 @@ import RulesScreen from '../screens/RulesScreen';
 import NameScreen from '../screens/NameScreen';
 import BirthdayScreen from '../screens/BirthdayScreen';
 import GenderScreen from '../screens/GenderScreen';
+import SexualOrientationScreen from '../screens/SexualOrientationScreen';
+import InterestedScreen from '../screens/InterestedScreen';
+import LookingForScreen from '../screens/LookingForScreen';
+import DistancePreferenceScreen from '../screens/DistancePreferenceScreen';
 
 
 const Stack = createStackNavigator();
@@ -24,6 +28,14 @@ const Navigator = () => {
       <Stack.Screen name="NameScreen" component={NameScreen} />
       <Stack.Screen name="BirthdayScreen" component={BirthdayScreen} />
       <Stack.Screen name="GenderScreen" component={GenderScreen} />
+      <Stack.Screen name="SexualOrientationScreen" component={SexualOrientationScreen} />
+      <Stack.Screen name="InterestedScreen" component={InterestedScreen} />
+      <Stack.Screen name="LookingForScreen" component={LookingForScreen} />
+      <Stack.Screen name="DistancePreferenceScreen" component={DistancePreferenceScreen} />
+
+
+
+
 
 
 

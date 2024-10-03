@@ -1,58 +1,58 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const GenderScreen = ({ navigation }) => {
-  const [selectedGender, setSelectedGender] = useState(null);
+const InterestedScreen = ({ navigation }) => {
+  const [selectedInterest, setSelectedInterest] = useState(null);
 
-  const handleGenderSelect = (gender) => {
-    setSelectedGender(gender);
+  const handleSelectInterest = (interest) => {
+    setSelectedInterest(interest);
   };
 
   const handleNext = () => {
-    if (selectedGender) {
-      navigation.navigate('SexualOrientationScreen');
+    if (selectedInterest) {
+      navigation.navigate('LookingForScreen'); // Replace with your next screen
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>What is your gender?</Text>
+      <Text style={styles.title}>Who are you interested in seeing?</Text>
       <View style={styles.optionsContainer}>
         <TouchableOpacity
           style={[
             styles.option,
-            selectedGender === 'Male' && styles.selectedOption,
+            selectedInterest === 'Women' && styles.selectedOption,
           ]}
-          onPress={() => handleGenderSelect('Male')}
+          onPress={() => handleSelectInterest('Women')}
         >
-          <Text style={styles.optionText}>Male</Text>
+          <Text style={styles.optionText}>Women</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
             styles.option,
-            selectedGender === 'Female' && styles.selectedOption,
+            selectedInterest === 'Men' && styles.selectedOption,
           ]}
-          onPress={() => handleGenderSelect('Female')}
+          onPress={() => handleSelectInterest('Men')}
         >
-          <Text style={styles.optionText}>Female</Text>
+          <Text style={styles.optionText}>Men</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={[
             styles.option,
-            selectedGender === 'More' && styles.selectedOption,
+            selectedInterest === 'Everyone' && styles.selectedOption,
           ]}
-          onPress={() => handleGenderSelect('More')}
+          onPress={() => handleSelectInterest('Everyone')}
         >
-          <Text style={styles.optionText}>More</Text>
+          <Text style={styles.optionText}>Everyone</Text>
         </TouchableOpacity>
       </View>
       <TouchableOpacity
         style={[
           styles.nextButton,
-          !selectedGender && styles.disabledNextButton,
+          !selectedInterest && styles.disabledNextButton,
         ]}
         onPress={handleNext}
-        disabled={!selectedGender}
+        disabled={!selectedInterest}
       >
         <Text style={styles.nextButtonText}>Next</Text>
       </TouchableOpacity>
@@ -77,12 +77,13 @@ const styles = StyleSheet.create({
   optionsContainer: {
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'space-between',
     marginBottom: 24,
   },
   option: {
-    paddingVertical: 12,
-    paddingHorizontal: 24,
+    flex: 1,
+    paddingVertical: 20,
+    margin: 5,
     borderRadius: 30,
     borderWidth: 1,
     borderColor: '#ccc',
@@ -101,7 +102,8 @@ const styles = StyleSheet.create({
     borderColor: '#ff6666',
   },
   optionText: {
-    fontSize: 18,
+    fontSize: 20,
+    textAlign: 'center',
     color: '#333',
   },
   nextButton: {
@@ -127,4 +129,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default GenderScreen;
+export default InterestedScreen;

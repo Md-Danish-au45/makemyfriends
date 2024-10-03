@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import { View, Text, TouchableOpacity, StyleSheet, Slider } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
+import Slider from '@react-native-community/slider'; // Import Slider from the new package
 
 const DistancePreferenceScreen = ({ navigation }) => {
   const [distance, setDistance] = useState(10); // Default distance in km
 
   const handleNext = () => {
-    navigation.navigate('NextScreen', { distance }); // Pass the selected distance to the next screen
+    navigation.navigate('StudyingPage', { distance }); // Pass the selected distance to the next screen
   };
 
   return (

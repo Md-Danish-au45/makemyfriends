@@ -7,7 +7,7 @@ const StudyingPage = ({ navigation }) => {
 
   const handleNext = () => {
     // Navigate to the next screen, passing the school name and status
-    navigation.navigate('NextScreen', { schoolName, status });
+    navigation.navigate('LifestyleHabitsPage', { schoolName, status });
   };
 
   return (

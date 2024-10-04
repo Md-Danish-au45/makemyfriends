@@ -14,6 +14,9 @@ import InterestedScreen from '../screens/InterestedScreen';
 import LookingForScreen from '../screens/LookingForScreen';
 import DistancePreferenceScreen from '../screens/DistancePreferenceScreen';
 import StudyingPage from '../screens/StudyingPage';
+import LifestyleHabitsPage from '../screens/LifestyleHabitsPage';
+import AdditionalQuestionsPage from '../screens/AdditionalQuestionsPage';
+import RecentPicsPage from '../screens/RecentPicsPage';
 
 
 const Stack = createStackNavigator();
@@ -34,6 +37,12 @@ const Navigator = () => {
       <Stack.Screen name="LookingForScreen" component={LookingForScreen} />
       <Stack.Screen name="DistancePreferenceScreen" component={DistancePreferenceScreen} />
       <Stack.Screen name="StudyingPage" component={StudyingPage} />
+      <Stack.Screen name="LifestyleHabitsPage" component={LifestyleHabitsPage} />
+      <Stack.Screen name="AdditionalQuestionsPage" component={AdditionalQuestionsPage} />
+      <Stack.Screen name="RecentPicsPage" component={RecentPicsPage} />
+
+
+
 
 
 

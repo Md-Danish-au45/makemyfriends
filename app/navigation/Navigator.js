@@ -1,17 +1,19 @@
 
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import About from '../screens/About';
-import Home from '../screens/Homes';
 
+import Signin1 from '../screens/auth/Signin1';
+import PhoneNoScreen from '../screens/auth/PhoneNoScreen';
+import OtpScreen from '../screens/auth/OtpScreen';
 
 const Stack = createStackNavigator();
 
 const Navigator = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
-      <Stack.Screen name="About" component={About} />
+    
+      <Stack.Screen name="phone" component={PhoneNoScreen} />
+      <Stack.Screen name="otp" component={OtpScreen} />
     </Stack.Navigator>
   );
 };
